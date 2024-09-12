@@ -1,0 +1,992 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f2f3f4;
+}
+body::-webkit-scrollbar{
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgba(0,0,0, 0.8);
+}
+body::-webkit-scrollbar-thumb{
+  background: white;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  font-family: 'Lexend', sans-serif;
+}
+b{
+  color: #eb9b46;
+}
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bar{
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.section-title-white{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  color: #f2f3f4;
+  font-size: 6rem;
+}
+.section-title-black{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  color: black;
+  font-size: 4rem;
+  padding-bottom: 1em;
+}
+/*Nav Bar*/
+.logo{
+    font-size: 1.6rem;
+    width: 10ch;
+    cursor: pointer;
+    margin: 0 3em;
+    color: aliceblue;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em 10em;
+  background-color: rgba(3, 75, 100, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header .menu-button{
+  display:none;
+}
+nav ul{
+  display: inline-flex;
+  list-style: none;
+}
+nav a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 1.32em;
+  position: relative;
+  padding-top: 5ch;
+  cursor: pointer;
+}
+nav a::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+nav a:hover:after{
+  width: 100%;
+}
+nav ul li ul{
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(3, 75, 100, 0.8);
+  backdrop-filter: blur(10px);
+  right: 80.5ch;
+  top: 10.85ch;
+}
+nav ul li:hover ul{
+  display: block;
+}
+nav ul li ul li{
+  display: block;
+}
+nav ul li ul li{
+  padding: 2em 0.5em;
+}
+header svg{
+  cursor:pointer;
+}
+.sidebar{
+  position: fixed;
+  padding: 0 2em;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(3, 75, 100, 0.8);
+  backdrop-filter: blur(10px);
+  display: none;
+  transition: .2s;
+}
+.sidebar ul{
+  top: 10%;
+}
+.sidebar li{
+  text-align: left;
+  font-weight: bold;
+  padding: 3em 0;
+}
+/*End Nav Bar*/
+
+/*Hero Section*/
+#hero{
+  background-image: url(./img/hero-boat.jpg);
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  z-index: 1;
+}
+#hero::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05232D;
+  opacity: 75%;
+  z-index: -1;
+}
+#hero h1{
+  display: block;
+  width: fit-content;
+  font-size: 9rem;
+  position: relative;
+  color: white;
+  padding-bottom: .2em;
+}
+#hero p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+}
+#hero .cta{
+  display: inline-block;
+  padding: 1em 4em;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 2em;
+  transition: .2s ease;
+  transition-property: background-color, color;
+  scroll-behavior: smooth;
+}
+#hero .cta:hover{
+  color: black;
+  background-color: white;
+}
+/*End Hero Section*/
+
+
+/*Overview Section*/
+#overviews .overviews{
+  flex-direction: column;
+  text-align: left;
+  max-width: 300ch;
+  margin: 0 auto;
+  padding: 10em 0;
+}
+#overviews .overview-title{
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+#overviews .overview-cards{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 5em;
+  z-index: 1;
+}
+#overviews .overview-item{
+  max-width: 28ch;
+  padding: 2em;
+  border-radius: 15px;
+  background-color: #f2f3f4;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 2rem;
+  font-weight: normal;
+}
+#overviews .wrap{
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: -1;
+}
+#overviews h2{
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 1.3em;
+}
+#overviews ul{
+  list-style-type: none;
+}
+#overviews li{
+  letter-spacing: .1rem;
+  padding-bottom: 2em;
+  text-align: center;
+}
+#overviews .greenfish{
+  width: 40%;
+  max-width: 100ch;
+  transform: scaleX(-1) rotate(30deg);
+  right: 70%;
+  top: -30%;
+  z-index: -1;
+  height: auto;
+}
+#overviews .blackfish{
+  width: 40%;
+  max-width: 160ch;
+  left: 59%;
+  bottom: -20%;
+  z-index: 2;
+  overflow: hidden;
+  height: auto;
+}
+#overviews img{
+  display: block;
+  position: absolute;
+}
+/*End Overview Section*/
+
+/*Facts Section*/
+#facts{
+  background-image: url(./img/facts-bg-img.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#facts::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#facts .facts{
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10em 0;
+  max-width: 300ch;
+}
+#facts .facts-info{
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10em;
+  width: 60%;
+  max-width: 180ch;
+}
+#facts .facts-img{
+  align-items: center;
+  justify-content: center;
+  max-width: 20%;
+  max-width: 120ch;
+}
+#facts .section-title-white{
+  text-align: left;
+}
+#facts .facts-info-buttons{
+  padding-top: 10em;
+}
+#facts .facts-buttons{
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+}
+#facts .button{
+  margin-right: 2em;
+}
+#facts .cta{
+  display: inline-block;
+  padding: 1em 2em;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 1em;
+  transition: .2s ease;
+  transition-property: background-color, color;
+  scroll-behavior: smooth;
+}
+#facts .cta:hover{
+  color: black;
+  background-color: white;
+}
+#facts h1{
+  margin-bottom: 1em;
+}
+#facts p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+}
+#facts img{
+  max-width: 70ch;
+  max-height: 80vh;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/*End Facts Section*/
+
+
+/*Flashcard Section*/
+#flashcard .flashcard{
+  flex-direction: column;
+  max-width: 300ch;
+  margin: 0 auto;
+  padding: 10em 0;
+}
+#flashcard .section-title-black{
+  max-width: 55ch;
+}
+#flashcard p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: black;
+  padding-bottom: 1.5em;
+}
+#flashcard img{
+  width: 150ch;
+  max-height: 80ch;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
+}
+#flashcard .slides-container{
+  display: flex;
+  width: 160ch;
+  align-items: center;
+}
+#flashcard .slider-title{
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  bottom: 32%;
+  right: 15%;
+  z-index: 2;
+  text-align: right;
+}
+#flashcard .button{
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  position: relative;
+  font-weight: bold;
+  cursor:pointer;
+  bottom: 30%;
+  left: 20%;
+  font-size: 2rem;
+  letter-spacing: .1em;
+  padding: 0.3em 1.5em;
+  z-index: 50;
+}
+#flashcard .button:hover{
+  color: black;
+  background-color: white;
+}
+#flashcard .sliders{
+  max-width: 150ch;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 15px;
+}
+#flashcard .wrap{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.slider{
+  transition: 0.7s ease;
+}
+#flashcard .slider img{
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+}
+#flashcard .pic1::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 85%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #034B62;
+  opacity: 55%;
+  z-index: 1;
+}
+.dot{
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin: 80px 10px;
+  background-color:white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+.dot:hover{
+  background-color: #73D4EA;
+}
+input[name="pic"]{
+  position: absolute;
+  visibility: hidden;
+}
+#flashcard .flashcard-nav{
+  position: absolute;
+  margin: 0 auto;
+  left: 35%;
+  bottom: 5%;
+  display: flex;
+  position: absolute;
+  height: auto;
+  z-index: 2;
+}
+#pic1:checked ~ .pic1{
+  margin-left: 0;
+}
+
+#pic2:checked ~ .pic1{
+  margin-left: -100%;
+}
+
+#pic3:checked ~ .pic1{
+  margin-left: -200%;
+}
+#pic4:checked ~ .pic1{
+  margin-left: -300%;
+}
+#pic5:checked ~ .pic1{
+  margin-left: -400%;
+}
+#pic6:checked ~ .pic1{
+  margin-left: -500%;
+}
+#pic1:checked ~ .title1{
+  margin-left: -100%;
+}
+/*End Flashcard Section*/
+
+
+/*Contact Section*/
+#contact{
+  background-image: url(./img/contact-bg-img.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#contact::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 50%;
+  z-index: -1;
+}
+#contact .contact{
+  flex-direction: column;
+  max-width: 300ch;
+  margin: 0 auto;
+  padding: 10em 0;
+  align-items: center;
+  justify-content: center;
+}
+#contact .section-title-black{
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+}
+#contact .contact-form-container{
+  display: flex;
+  flex-direction: row;
+  max-width: 90ch;
+  padding: 2em;
+  flex-basis: 80%;
+  border-radius: 15px;
+  background-color: #f2f3f4;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 2rem;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+}
+#contact button{
+  display: inline-block;
+  padding: 0.5em 2em;
+  color: white;
+  background-color: #034b64;
+  border: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  cursor: pointer;
+}
+#contact textarea{
+  background-color: #D9D9D9;
+  color: #626262;
+  border: 0;
+  padding: 1em 1em;
+  width: 50ch;
+  resize: none;
+  border: none;
+  outline: none;
+  margin: 1.5em 0;
+}
+#contact .header{
+  letter-spacing: normal;
+  text-align: left;
+  max-width: 50ch;
+  padding-bottom: 1.7em;
+  padding-right: 1.7em;
+}
+#contact h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  color: black;
+  font-size: 3rem;
+}
+/*End Contact Section*/
+
+/* ---MEDIA QUERIES DO NOT TOUCH---*/
+@media only screen and (max-width: 1037px) {
+  #overviews .overview-cards{
+    display: grid;
+    grid-auto-rows: 35% 30% 25%;
+    z-index: 1;
+  }
+    /*Hero Section*/
+#hero h1{
+  font-size: 6.5rem;
+}
+#hero p{
+  font-size: 2rem;
+}
+#hero .cta{
+  font-size: 1.5rem;
+}
+/*End Hero Section*/
+
+  #overviews .overview-item{
+    display:flex;
+    flex-direction: row;
+    max-width: 50ch;
+    border-radius: 15px;
+    background-color: #f2f3f4;
+    font-size: 2rem;
+    font-weight: normal;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+  #overviews h2{
+    text-align: center;
+    padding-right: 1em;
+  }
+  #overviews li{
+    letter-spacing: .1rem;
+    padding: 1em 0em;
+    text-align: right;
+  }
+  #overviews .greenfish{
+    width: 70%;
+    right: 60%;
+    top: -5%;
+  }
+  #overviews .blackfish{
+    width: 50%;
+    max-width: 160ch;
+    left: 50%;
+    bottom: 10%;
+    z-index: -1;
+  }
+
+
+/*Facts Section*/
+#facts .facts{
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10em 2em;
+  max-width: 250ch;
+}
+#facts .facts-info{
+  max-width: 150ch;
+}
+#facts .facts-info-buttons{
+  padding-top: 10em;
+}
+#facts .cta{
+  font-size: 1.5rem;
+}
+#facts .cta:hover{
+  color: black;
+  background-color: white;
+}
+#facts img{
+  max-width: 50ch;
+}
+/*End Facts Section*/
+
+/*Flashcard Section*/
+#flashcard .flashcard{
+  flex-direction: column;
+  max-width: 150ch;
+  margin: 0 auto;
+  padding: 10em 0;
+}
+#flashcard img{
+  width: 150ch;
+  max-height: 80ch;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
+}
+#flashcard .slides-container{
+  display: flex;
+  width: 130ch;
+  align-items: center;
+}
+#flashcard .slider-title{
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  bottom: 32%;
+  right: 15%;
+  z-index: 2;
+  text-align: right;
+}
+#flashcard .button{
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  position: relative;
+  font-weight: bold;
+  cursor:pointer;
+  bottom: 30%;
+  left: 20%;
+  font-size: 2rem;
+  letter-spacing: .1em;
+  padding: 0.3em 1.5em;
+  z-index: 50;
+}
+#flashcard .button:hover{
+  color: black;
+  background-color: white;
+}
+#flashcard .sliders{
+  max-width: 130ch;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 15px;
+}
+#pic1:checked ~ .pic1{
+  margin-left: 0;
+}
+
+#pic2:checked ~ .pic1{
+  margin-left: -120%;
+}
+
+#pic3:checked ~ .pic1{
+  margin-left: -235%;
+}
+#pic4:checked ~ .pic1{
+  margin-left: -350%;
+}
+#pic5:checked ~ .pic1{
+  margin-left: -470%;
+}
+#pic6:checked ~ .pic1{
+  margin-left: -580%;
+}
+#pic1:checked ~ .title1{
+  margin-left: -100%;
+}
+/*End Flashcard Section*/
+
+/*Contact Section*/
+#contact .contact-form-container{
+  max-width: 100vw;
+  padding: 2em;
+  border-radius: 0;
+  background-color: #f2f3f4;
+  font-size: 2rem;
+}
+#contact button{
+  font-size: 1.5rem;
+}
+#contact textarea{
+  max-width: 40ch;
+}
+#contact .header{
+  letter-spacing: normal;
+  text-align: left;
+  max-width: 50ch;
+  padding-bottom: 1.7em;
+  padding-right: 1.7em;
+}
+}
+@media only screen and (max-width: 961px) {
+  nav .hideOnMobile{
+    display:none;
+  }
+  header{
+    padding: 2em 5em;
+  }
+  header .menu-button{
+    display:block;
+  }
+  header svg{
+    display: block;
+  }
+/*Facts Section*/
+#facts{
+  background-image: url(./img/facts-bg-img.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#facts::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#facts .facts{
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10em 0;
+  max-width: 2500ch;
+}
+#facts .facts-info{
+  padding-right: 10em;
+  width: 80%;
+  max-width: 250ch;
+}
+#facts .cta{
+  padding: 1em 2em;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#facts .cta:hover{
+  color: black;
+  background-color: white;
+}
+#facts h1{
+  margin-bottom: 1em;
+}
+#facts img{
+  display:none;
+}
+/*End Facts Section*/
+
+  /*Flashcard Section*/
+#flashcard .flashcard{
+  max-width: 110ch;
+}
+#flashcard img{
+  width: 150ch;
+  max-height: 80ch;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
+}
+#flashcard .slider-container{
+  display: flex;
+  width: 80%;
+  max-width: 150ch;
+  align-items: center;
+}
+#flashcard .slider-title{
+  letter-spacing: .3rem;
+  font-size: 2rem;
+  bottom: 32%;
+  right: 20%;
+  text-align: center;
+}
+#flashcard .pic1::after{
+  height: 87.3%;
+}
+#flashcard .button{
+  bottom: 30%;
+  left: -20%;
+  font-size: 1.5rem;
+  padding: 0.6em 1.5em;
+}
+#flashcard .sliders{
+  max-width: 130ch;
+}
+.dot{
+  border-radius: 50%;
+}
+#flashcard .flashcard-nav{
+  left: 24%;
+  bottom: 5%;
+}
+#pic1:checked ~ .pic1{
+  margin-left: 0;
+}
+
+#pic2:checked ~ .pic1{
+  margin-left: -170%;
+}
+
+#pic3:checked ~ .pic1{
+  margin-left: -340%;
+}
+#pic4:checked ~ .pic1{
+  margin-left: -511.5%;
+}
+#pic5:checked ~ .pic1{
+  margin-left: -682%;
+}
+#pic6:checked ~ .pic1{
+  margin-left: -852.2%;
+}
+#pic1:checked ~ .title1{
+  margin-left: -100%;
+}
+/*End Flashcard Section*/
+}
+@media only screen and (max-width: 641px) {
+  .sidebar{
+    width: 100%;
+  }
+  #overviews img{
+    display: none;
+  }
+  #contact .contact-form-container{
+    max-width: 100vw;
+    padding: 2em;
+    border-radius: 0;
+    background-color: #f2f3f4;
+    font-size: 2rem;
+  }
+  #contact button{
+    font-size: 1.5rem;
+  }
+  #contact textarea{
+    max-width: 40ch;
+  }
+  #contact .header{
+    letter-spacing: normal;
+    text-align: left;
+    max-width: 50ch;
+    padding-bottom: 1.7em;
+    padding-right: 1.7em;
+  }
+  #contact .section-title-black{
+    font-size: 2rem;
+    letter-spacing: .2rem;
+  }
+  #contact p{
+    font-size: 1.5rem;
+  }
+#contact button{
+  display: inline-block;
+  padding: 0.5em 2em;
+  color: white;
+  background-color: #034b64;
+  border: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  cursor: pointer;
+}
+#contact textarea{
+  background-color: #D9D9D9;
+  color: #626262;
+  border: 0;
+  padding: 1em 1em;
+  width: 50ch;
+  resize: none;
+  border: none;
+  outline: none;
+  margin: 1.5em 0;
+}
+#contact .header{
+  letter-spacing: normal;
+  text-align: left;
+  max-width: 50ch;
+  padding-bottom: 1.7em;
+  padding-right: 1.7em;
+}
+#contact h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  color: black;
+  font-size: 1.5rem;
+}
+/*End Contact Section*/
+}
+@media only screen and (max-width: 481px){
+
+}
+
+

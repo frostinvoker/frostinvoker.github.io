@@ -1,0 +1,461 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  font-family: 'Lexend', sans-serif;
+}
+img{
+  max-width: 90ch;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+b{
+  color: #eb9b46;
+}
+body::-webkit-scrollbar{
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgba(0,0,0, 0.8);
+}
+body::-webkit-scrollbar-thumb{
+  background: white;
+}
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section-title-white{
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  letter-spacing: .5rem;
+  color: white;
+  font-size: 6rem;
+}
+.content{
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10em 0;
+  width: 80%;
+  max-width: 200ch;
+}
+.content p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+  letter-spacing: .1rem;
+}
+.info{
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10ch;
+  width: 90%;
+  max-width: 200ch;
+}
+.image{
+  align-items: center;
+  justify-content: center;
+  max-width: 20%;
+  max-width: 150ch;
+}
+/*Nav Bar*/
+.logo{
+  font-size: 1.6rem;
+  width: 10ch;
+  cursor: pointer;
+  margin: 0 3em;
+  color: aliceblue;
+}
+header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 2em 10em;
+background-color: rgba(3, 75, 100, 0.8);
+backdrop-filter: blur(10px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header .menu-button{
+display:none;
+}
+nav ul{
+display: inline-flex;
+list-style: none;
+}
+nav a{
+font-size: 1.5rem;
+text-decoration: none;
+color: white;
+text-transform: uppercase;
+margin: 1.32em;
+position: relative;
+padding-top: 5ch;
+cursor: pointer;
+}
+nav a::after{
+content: '';
+height: 3px;
+width: 0;
+background: white;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: 0.5s;
+}
+nav a:hover:after{
+width: 100%;
+}
+nav ul li ul{
+display: none;
+position: absolute;
+text-align: center;
+background-color: rgba(3, 75, 100, 0.8);
+backdrop-filter: blur(10px);
+right: 80.5ch;
+top: 10.85ch;
+}
+nav ul li:hover ul{
+display: block;
+}
+nav ul li ul li{
+display: block;
+}
+nav ul li ul li{
+padding: 2em 0.5em;
+}
+header svg{
+cursor:pointer;
+}
+.sidebar{
+position: fixed;
+padding: 0 2em;
+top: 0;
+right: 0;
+height: 100vh;
+width: 40%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: rgba(3, 75, 100, 0.8);
+backdrop-filter: blur(10px);
+display: none;
+transition: .2s;
+}
+.sidebar ul{
+top: 10%;
+}
+.sidebar li{
+text-align: left;
+font-weight: bold;
+padding: 3em 0;
+}
+/*End Nav Bar*/
+
+/*Hero Section*/
+#hero{
+  background-image: url(./img/history/hero-history.jpg);
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  z-index: 1;
+}
+#hero::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05232D;
+  opacity: 70%;
+  z-index: -1;
+}
+#hero h1{
+  display: block;
+  width: fit-content;
+  font-size: 9rem;
+  position: relative;
+  color: white;
+  padding-bottom: 0.3em;
+  text-align: center;
+  font-family: 'Lexend', sans-serif;
+}
+#hero p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+}
+#hero .cta{
+  display: inline-block;
+  padding: 1em 4em;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 2em;
+  transition: .2s ease;
+  transition-property: background-color, color;
+  scroll-behavior: smooth;
+}
+#hero .cta:hover{
+  color: black;
+  background-color: white;
+
+}
+/*End Hero Section*/
+
+/*First Fishers Section*/
+#first-fishers{
+  background-image: url(./img/history/homo-habilis.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#first-fishers::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#first-fishers .section-title-white{
+  text-align: left;
+}
+#first-fishers h1{
+  margin-bottom: 0.5em;
+}
+#first-fishers p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+}
+/*End First Fishers Section*/
+
+
+/*Paleolithic Section*/
+#paleolithic{
+  background-image: url(./img/history/homo-sapiens.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#paleolithic::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#paleolithic .section-title-white{
+  text-align: left;
+}
+#paleolithic h1{
+  margin-bottom: 0.5em;
+}
+/*End Paleolithic Section*/
+
+/*First Egypt Section*/
+#egypt{
+  background-image: url(./img/history/ancient-egyptian.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#egypt::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#egypt .section-title-white{
+  text-align: left;
+}
+#egypt h1{
+  margin-bottom: 40px;
+}
+
+/*Graeco Section*/
+#greco{
+  background-image: url(./img/history/greco-roman-antiquity.png);
+  background-size: cover;
+  background-position: 20%;
+  position: relative;
+  z-index: 1;
+}
+#greco::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#greco .section-title-white{
+  text-align: left;
+}
+#greco h1{
+  margin-bottom: 0.5em;
+}
+/*End Graeco Section*/
+
+
+/*Middle-Ages Section*/
+#middle-ages{
+  background-image: url(./img/history/medieval-period.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#middle-ages::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+
+#middle-ages .section-title-white{
+  text-align: left;
+}
+#middle-ages h1{
+  margin-bottom: 0.5em;
+}
+#middle-ages p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+  padding-bottom: 1em;
+  letter-spacing: .1rem;
+}
+/*Middle-Ages Section*/
+
+/*great-britain Section*/
+#great-britain{
+  background-image: url(./img/history/great-britain.jpeg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#great-britain::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#great-britain .section-title-white{
+  text-align: left;
+}
+#great-britain h1{
+  margin-bottom: 0.5em;
+}
+/*End great-britain Section*/
+
+/*18TH Century Section*/
+#modern{
+  background-image: url(./img/history/modern.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#modern::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #05212B;
+  opacity: 80%;
+  z-index: -1;
+}
+#modern .section-title-white{
+  text-align: left;
+}
+#modern h1{
+  margin-bottom: 0.5em;
+}
+
+/*End great-britain Section*/
+
+@media only screen and (max-width: 961px) {
+  nav .hideOnMobile{
+    display:none;
+  }
+  header{
+    padding: 2em 5em;
+  }
+  header .menu-button{
+    display:block;
+  }
+  header svg{
+    display: block;
+  }
+  
+}
+@media only screen and (max-width: 641px) {
+  .sidebar{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 481px){
+
+}

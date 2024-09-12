@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+  </head>
+
+  <body>
+    <!-- Nav Section-->
+      <header>
+        <H1 class="logo">INFO DOCK</H1>
+        <nav>
+          <div>
+            <ul class="hideOnMobile">
+              <li><a href="index.html">Home</a></li>
+              <li><a>Fishing</a>
+                <ul>
+                  <li><a href="guidepage.html">Guide</a></li>
+                  <li><a href="fact-page.html">Facts</a></li>
+                  <li><a href="fishingvideos.html">Videos</a></li>
+                </ul>
+              </li>
+              <li><a href="historypage.html">History</a></li>
+              <li><a href="fish-gallery.html">Gallery</a></li>
+              <li><a href="#contact">Contact us</a></li>
+            </ul>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></li>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="guidepage.html">Guide</a></li>
+              <li><a href="fact-page.html">Facts</a></li>
+              <li><a href="fishingvideos.html">Videos</a></li>
+              <li><a href="historypage.html">History</a></li>
+              <li><a href="fish-gallery.html">Gallery</a></li>
+              <li><a href="#contact">Contact us</a></li>
+            </ul>
+          </div>
+        </nav>
+        <svg onclick=showSidebar() class="menu-button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        
+      </header>
+    <!-- End Nav Section-->
+
+    <!--Hero Section-->
+    <section id="hero">
+      <div class="hero container">
+        <div>
+          <h1>DOCKS & FISHING</h1>
+          <p>Explore all about fishing in this website</p>
+          <a href="#overviews" type="button" class="cta">READ MORE</a>
+        </div>
+      </div>
+    </section>
+    <!--End Hero Section-->
+
+    <!--Overview Section-->
+    <section id="overviews">
+      <div class="overviews container">
+        <div class="overview-title">
+          <h1 class="section-title-black">What to expect?</h1>
+        </div>
+        <div class="wrap">
+          <img src="./img/Black-fish-1.png" class="blackfish">
+          <img src="./img/Green-fish.png" class="greenfish">
+        <div class="overview-cards">
+          <div class="overview-item">
+            <h2>Features</h2>
+            <ul>
+              <li>Wide range of information</li>
+              <li>Tools to enhance your learning</li>
+              <li>Tutorials and fun facts</li>
+              <li>Visual Presentations</li>
+              <li>Videos and demonstration’s</li>
+            </ul>
+          </div>
+          <div class="overview-item">
+            <h2>Learn</h2>
+            <ul>
+              <li>Learn facts about fishing</li>
+              <li>Explore new hobbies</li>
+              <li>Learn  the fundamentals of fishing</li>
+              <li>Learn about the different types of fishes</li>
+            </ul>
+          </div>
+          <div class="overview-item">
+            <h2>Experience</h2>
+            <ul>
+              <li>Experience the fun in exploring fishing</li>
+              <li>Applying your knowledge in real life scenarios</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!--End Overview Section-->
+
+    <!--Facts Section-->
+    <section id="facts">
+      <div class="facts container">
+          <div class="facts-info">
+            <h1 class="section-title-white">DID YOU KNOW?</h1>
+            <p>The <b>biggest</b> fish ever caught on record is a <b>2,664 lbs Great White Shark</b> that was caught in <b>1959</b> by <b>Alfred Dean</b> of Irymple, Victoria.
+                 He managed to do this with a <b>porpoise</b> as bait on a <b>130-pound line</b>, all within a matter of <b>50 minutes!</b></p>
+            <div class="facts-info-buttons">
+              <p>You can read more about <b>Facts</b> & <b>History</b> here!</p>
+            </div>
+            <div class="facts-buttons">
+              <div class="button">
+                <a href="fact-page.html" type="button" class="cta">READ MORE FACTS</a>
+              </div>
+              <div class="button">
+                <a href="historypage.html" type="button" class="cta">READ ABOUT HISTORY</a>
+              </div>
+            </div>
+          </div>
+          <div class="facts-img">
+            <img src="./img/Alfred_dean.jpg">
+          </div>
+      </div>
+    </section>
+    <!--End Fact Section-->
+
+    <!--Flashcard Section-->
+    <section id="flashcard">
+      <div class="flashcard container">
+        <div>
+          <h1 class="section-title-black">HERE'S SOME QUICK AND EASY ACCESS TO OUR CONTENT JUST FOR YOU.</h1>
+          <p>Just one click on the topic that you want to know about, and you will be directed onto that page & section.</p>
+        </div>
+        <div class="slider-container">
+          <div class="wrap">
+            <div class="sliders">
+              <input type="radio" name="pic" id="pic1" checked>
+              <input type="radio" name="pic" id="pic2">
+              <input type="radio" name="pic" id="pic3">
+              <input type="radio" name="pic" id="pic4">
+              <input type="radio" name="pic" id="pic5">
+              <input type="radio" name="pic" id="pic6">
+
+              <div class="slider pic1">
+                <img src="./img/sliders/slide1.jpg">
+                <span class="title1"><h2 class="slider-title">GET STARTED WITH FISHING</h2></span>
+                <a href="guidepage.html"><button class="button">CLICK HERE</button></a>
+              </div>
+              <div class="slider pic2">
+                <img src="./img/sliders/slide2.jpg">
+                <span class="title1"><h2 class="slider-title">Watch our Fishing Videos</h2></span>
+                <a href="fishingvideos.html"><button class="button">CLICK HERE</button></a>
+              </div>
+              <div class="slider pic3">
+                <img src="./img/sliders/slide3.jpg">
+                <span class="title1"><h2 class="slider-title">Make your Fishing Equipment</h2></span>
+                <a href="guidepage.html #step5-6-7"><button class="button">CLICK HERE</button></a>
+              </div>
+              <div class="slider pic4">
+                <img src="./img/sliders/slide4.jpg">
+                <span class="title1"><h2 class="slider-title">Fishing in the past...</h2></span>
+                <a href="historypage.html"><button class="button">CLICK HERE</button></a>
+              </div>
+              <div class="slider pic5">
+                <img src="./img/sliders/slide5.jpg">
+                <span class="title5"><h2 class="slider-title">How to bait the fish</h2></span>
+                <a href="guidepage.html #step8-9"><button class="button">CLICK HERE</button></a>
+              </div>
+              <div class="slider pic6">
+                <img src="./img/sliders/slide6.png">
+                <span class="title6"><h2 class="slider-title">Learn about the kinds of Fishes</h2></span>
+                <a href="fish-gallery.html"><button class="button">CLICK HERE</button></a>
+              </div>
+                <div class="flashcard-nav">
+                  <label for="pic1" class="dot"></label>
+                  <label for="pic2" class="dot"></label>
+                  <label for="pic3" class="dot"></label>
+                  <label for="pic4" class="dot"></label>
+                  <label for="pic5" class="dot"></label>
+                  <label for="pic6" class="dot"></label>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Flashcard Section-->
+
+
+    <!--Contact Section-->
+    <section id="contact">
+      <div class="contact container">
+          <div class="contact-form-container">
+            <div class="header">
+              <h1 class="section-title-black">Do you wish to contact us? You can send a message!</h1>
+              <p>If you have any info or suggestion that you want to share with us, you can write your message on the box on the right, and then click on send to send the message. We appreciate your feedback!</p>
+            </div>
+            <div class="contact-form">
+              <form>
+                <label for="message"><h2>Message</h2></label>
+                <textarea name="message" rows="15" cols="10" placeholder="Write something here..."></textarea>
+              </form>
+               <a href=""><button>SEND</button></a>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!--End Contact Section-->
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display='flex';
+        header.style.display='none'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display='none';
+      }
+    </script>
+  </body>
+</html>

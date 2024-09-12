@@ -1,0 +1,149 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f2f3f4;
+}
+body::-webkit-scrollbar{
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgba(0,0,0, 0.8);
+}
+body::-webkit-scrollbar-thumb{
+  background: white;
+}
+a{
+  text-decoration: none;
+}
+h1{
+  font-family: 'Lexend', sans-serif;
+}
+b{
+  color: #eb9b46;
+}
+img {
+  width: 80%;
+  height: 80%;
+  margin-bottom: 0.7cm;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.bar{
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+/*Nav Bar*/
+.logo{
+    font-size: 1.6rem;
+    width: 10ch;
+    cursor: pointer;
+    margin: 0 3em;
+    color: aliceblue;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em 10em;
+  background-color: rgba(232, 141, 103, 1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header .menu-button{
+  display:none;
+}
+nav ul{
+  display: inline-flex;
+  list-style: none;
+}
+nav a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 1.32em;
+  position: relative;
+  padding-top: 5ch;
+  cursor: pointer;
+}
+/*End Nav Bar*/
+
+/*Hero Section*/
+#hero{
+  height: 100%;
+  width: 100%;
+  background-color: #322C2B;
+  z-index: -1;
+}
+#hero h1{
+  display: block;
+  width: fit-content;
+  font-size: 6rem;
+  position: relative;
+  color: white;
+  padding-bottom: .2em;
+  text-align: right;
+}
+#hero p{
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  color: white;
+  text-align: right;
+}
+#hero .cta{
+  display: inline-block;
+  padding: 1em 4em;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  transition: .2s ease;
+  transition-property: background-color, color;
+  scroll-behavior: smooth;
+  margin: 0 0.5em;
+}
+#hero .cta:hover{
+  color: black;
+  background-color: white;
+}
+#hero .buttons{
+  align-items: right;
+  justify-content: right;
+  margin-top: 2em;
+}
+#hero .left-panel{
+  width: 40%;
+  padding-left: 10em;
+}
+#hero .right-panel{
+  width: 60%;
+  padding-right: 10em;
+  text-align: right;
+}
+/*End Hero Section*/
+
+
